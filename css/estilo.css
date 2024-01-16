@@ -1,0 +1,691 @@
+/*GENERAL*/
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+@font-face {
+    font-family: OpenSans;
+    src: url(fonts/Open_Sans/static/OpenSans_SemiCondensed-Regular.ttf);
+}
+
+/* LOGIN */
+
+#body-login{
+    background: #2E3D4C;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Usar viewport height para ocupar toda la pantalla */
+    margin: 0; /* Resetear el margen para evitar espacio adicional */
+}
+
+.login-form {
+    min-height: 300px; /* Establece la altura mínima del formulario */
+    margin: 5%;    background: rgba(46, 61, 76, 0.9); /* Fondo con efecto de transparencia */
+    font-family: OpenSans;
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+}
+
+
+.content-container {
+    display: flex;
+    align-items: center;
+}
+.login-form i.fa-solid{
+    color: #EDF8FE;
+    font-size: 50px;
+    margin-bottom: 10px;
+}
+.login-form h1 {
+    color: #EDF8FE;
+    font-family: OpenSans;
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.login-form [type="email"],
+.login-form input[type="password"]{
+    font-family: OpenSans;
+    color: #A5A8A8;
+    width: 370px;
+    height: 50px;
+    border-radius: 6px;
+    border-style: solid;
+    border-color: white;
+    margin-bottom: 10px;
+    text-indent: 10px;
+    font-weight: bold;
+}
+
+.login-form [type="submit"] {
+    font-family: OpenSans;
+    background-color: #13D0AB;   
+    color: whitesmoke;
+    width: 370px;
+    height: 45px;
+    border-radius: 6px;
+    border-style: solid;
+    border-color: #13D0AB;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.login-form [type="submit"]:hover {
+    background-color: #0D8E6E;
+    border: #0D8E6E;
+}
+
+
+.error-message {
+    color: red;
+    display: block;
+}
+
+.login-form p{
+    color: #EDF8FE;
+    text-decoration: underline;
+    font-family: OpenSans;
+    margin-top: 10px;
+    transition: font-weight 0.3s;
+}
+
+.login-form p:hover{
+    font-weight: bold;
+}
+
+.login-form span{
+    color: red;
+}
+
+@media (max-width: 425px) {
+    .login-form {
+        min-height: 300px; /* Establece la altura mínima del formulario */
+        background: rgba(46, 61, 76, 0.9); /* Fondo con efecto de transparencia */
+        font-family: OpenSans;
+        text-align: center;
+        border-radius: none;
+        box-shadow: none;
+    }
+    
+    .login-form h1 {
+        font-size: 25px;
+    }
+    
+    .login-form [type="email"],
+    .login-form input[type="password"]{
+
+        width: 300px;
+        margin-left: 10px;
+    }
+    
+    .login-form [type="submit"]{
+        width: 300px;
+        margin-left: 10px;
+    }
+}
+
+
+/* INDEX */
+
+#contenedor-index {
+    display: grid;
+    grid-template-columns: 20% 80%;
+    grid-template-areas: "nav-index content-index";
+    width: 100vw; /* Usa viewport width en lugar de 100% */
+    height: 100vh; /* Usa viewport height en lugar de 100% */
+    max-height: 100vh; /* Establece una altura máxima */
+    overflow: hidden; /* Oculta el desbordamiento del contenido */
+}
+
+#nav-index {
+    grid-area: nav-index;
+    background-color: #2E3D4C;
+    height: 100%;
+    display: flex;
+    flex-direction: column; /* Cambiado a columna para que los elementos estén uno debajo del otro */
+}
+
+#nav-index .logo {
+    display: flex;
+    align-items: center;
+    margin: 20px;
+}
+
+#nav-index .logo i.fa-solid {
+    color: #EDF8FE;
+    margin-right: 5px;
+}
+
+#nav-index .logo p {
+    color: #EDF8FE;
+    font-family: OpenSans;
+    font-size: 20px;
+    margin: 0;
+}
+
+
+
+#nav-index .logo:hover i.fa-solid,
+#nav-index .logo:hover p {
+    color: #13D0AB;
+}
+
+
+#nav-index ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    
+}
+
+#nav-index li {
+    border-radius: 15px 1px 1px 15px;
+    margin: 20px 0 20px 25px;
+    padding: 10px 10px 10px 5px ;
+}
+
+#nav-index a {
+    text-decoration: none;
+    color: white;
+    font-family: OpenSans;
+    font-size: 20px;
+}
+
+.checkbtn{
+    font-size: 30px;
+    color: #2E3D4C;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+#check{
+    display: none;
+}
+
+
+
+#nav-index li:hover {
+    background-color:  white;
+    
+}
+
+#nav-index li:hover a,
+#nav-index li:hover i.fa-solid,
+#nav-index li:hover i.fas.fa-sign-out-alt {
+    color: #2E3D4C;
+}
+
+#nav-index i.fa-solid,
+#nav-index i.fas.fa-sign-out-alt{
+    color: white;
+    margin-right: 5px;
+}
+
+#content-index {
+    background-color: white;
+    grid-area: content-index;
+    overflow-y: auto; /* Agrega un desplazamiento vertical en caso necesario */
+}
+
+#content-index h1{
+    font-family: OpenSans;
+    color: #333;
+    margin: 20px;
+    display: inline-block; /* Permite que el label se alinee correctamente */
+}
+
+#content-index .nomUser {
+    font-family: OpenSans;
+    font-size: 20px;
+    color: #2E3D4C;
+    margin-right: 20px; /* Ajusta el margen derecho según sea necesario */
+    float: right; /* Alinea el label a la derecha */
+    line-height: 70px; /* Ajusta la altura de línea según sea necesario */
+
+}
+
+
+#content-index h2 {
+    font-family: OpenSans;
+    color: #333;
+    text-align: center; /* Center the text horizontally */
+    margin-top: 25px; /* Adjust the top margin as needed */
+    margin-bottom: 0; /* Ajusta el margen inferior a 0 */ 
+}
+
+
+#content-index .nomUser1 {
+    font-family: OpenSans;
+    font-size: 20px;
+    color: #2E3D4C;
+    margin-right: 20px; /* Ajusta el margen derecho según sea necesario */
+    float: right; /* Alinea el label a la derecha */
+    margin-top: -36px; /* Ajusta el margen superior a la misma cantidad que el margen superior de h2 */
+}
+/* USUARIO */
+
+.table-user {
+    font-family: OpenSans;
+    font-size: 15px;
+    border-collapse: collapse;
+    width: 100%;
+    margin: 20px 0;
+    overflow-y: auto; /* Agrega un desplazamiento vertical en caso necesario */
+    max-height: calc(100vh - 40px); /* Ajusta según el espacio disponible */
+}
+
+/* Estilo para las celdas de la tabla */
+.table-user th, .table-user td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+/* Estilo para las cabeceras de la tabla */
+.table-user th {
+    background-color: #f2f2f2;
+    color: #333;
+}
+
+
+/* Estilo al pasar el ratón sobre las filas de la tabla */
+.table-user tr:hover {
+    background-color: #f5f5f5;
+}
+
+.table-user td a i.fa-trash{
+    background-color: #FF5252; /* Rojo */
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+
+}
+
+.table-user td a i.fa-pen-to-square {
+    background-color: #2196F3; /* Azul */
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.botones a{
+    font-family: OpenSans;
+    color: white;
+    background-color:#0D8E6E ;
+    padding: 10px;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 15px;
+    margin-left: 20px;
+}
+
+.botones a i {
+    margin-right: 5px; /* Adjust the margin as needed */
+    margin-top:20px;
+    margin-bottom: 10px;
+}
+
+.botones a:hover{
+    background-color:#13D0AB ;
+}
+
+
+/* Estilo base para el select */
+select {
+    padding: 10px;
+    font-size: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    color: #333;
+    margin-left: 20px;
+}
+
+/* Estilo para el fondo del select desplegado */
+select:focus {
+    outline: none;
+    border-color: #0D8E6E; /* Cambia el color al enfocar el select */
+    box-shadow: 0 0 5px rgba(13, 142, 110, 0.7);
+}
+
+/* Estilo para las opciones del select */
+select option {
+    background-color: #fff;
+    color: #333;
+}
+
+/* Estilo para el hover de las opciones del select */
+select option:hover {
+    background-color: #0D8E6E;
+    color: #fff;
+}
+
+
+#content-index label {
+    font-family: OpenSans;
+    font-size: 15px;
+    margin-left: 20px;
+}
+
+#content-index input[type="number"]{
+    width: 40px;
+    padding: 10px;
+    font-size: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    color: #333;
+    margin-left: 20px;
+}
+#content-index input[type="text"]{
+    width: 100px;
+    padding: 10px;
+    font-size: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    color: #333;
+    margin-left: 20px;
+}
+
+#content-index input[type="number"]:focus,
+#content-index input[type="text"]:focus,
+#content-index .formulario input[type="email"]:focus,
+#content-index .formulario input[type="password"]:focus{
+    outline: none;
+    border-color: #0D8E6E; /* Cambia el color al enfocar el select */
+    box-shadow: 0 0 5px rgba(13, 142, 110, 0.7);
+}
+
+#content-index input[type="submit"] {
+    font-family: OpenSans;
+    font-size: 15px;
+    color: white;
+    background-color: #2E3D4C;
+    padding: 10px;
+    margin-left: 20px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    transition: background-color 0.3s, box-shadow 0.3s; /* Agrega una transición suave al color de fondo y la sombra del cuadro */
+}
+
+#content-index input[type="submit"]:hover {
+    background-color: #13D0AB;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Agrega una sombra al pasar sobre el botón */
+}
+
+form a{
+    font-family: OpenSans;
+    color: white;
+    background-color:#0D8E6E ;
+    padding: 0px 10px 0 10px;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 15px;
+    margin-left: 20px; 
+}
+
+form a i {
+    margin-right: 5px; /* Adjust the margin as needed */
+    margin-top:20px;
+    margin-bottom: 10px;
+}
+
+form a:hover{
+    background-color:#13D0AB ;
+}
+
+
+button[name='quitar']{
+    padding: 5px;
+    border-radius: 5px;
+    color: white;
+    background-color: #FF5252;
+    border: none;
+}
+button[name='quitar'] i.fa-xmark {
+    /* Aplica tus estilos aquí */
+    color: white;
+    background-color: #FF5252;
+}
+
+.error {
+    color: red;
+    margin: 10px;
+    font-family: OpenSans;
+    font-size: 15px;
+}
+
+#content-index .formulario {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    width: 300px;
+    margin: 0 auto; /* Center the form horizontally */
+    margin-top: 25px; /* Adjust the top margin as needed */
+}
+
+#content-index .formulario input[type="text"],
+#content-index .formulario input[type="number"],
+#content-index .formulario input[type="email"],
+#content-index .formulario input[type="password"]{
+    width: 238px;
+    padding: 10px;
+    font-size: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    color: #333;
+    margin: 5px 0 5px 20px;
+}
+
+#content-index .formulario select,
+#content-index .formulario input[type='submit']{
+    margin: 5px 0 5px 20px;
+}
+
+#content-index .formulario span{
+    color: #FF5252;
+    font-family: OpenSans; 
+    
+}
+
+.cajas-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 50px 0;
+}
+
+.caja {
+    flex: 1;
+    max-width: 180px;
+    min-width: 150px;
+    height: 80px;
+    background-color: #2E3D4C;
+    border-radius: 8px;
+    margin: 0 10px 20px 10px; /* Ajustado el margen para separar las cajas y dar espacio entre ellas */
+    display: flex;
+    align-items: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    transition: background-color 0.3s ease; /* Agregado un efecto de transición para el cambio de color */
+}
+
+.caja i {
+    font-size: 24px;
+    margin: 0 10px;
+    color: white;
+}
+
+.text-container {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    color: white;
+}
+
+.text1 {
+    font-size: 12px;
+}
+
+.text2 {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.caja:hover {
+    background-color: #13D0AB;
+}
+
+#formventas form {
+    display: flex;
+    align-items: center; /* Vertically align elements */
+    flex-wrap: wrap;
+  }
+
+@media (max-width: 966px) {
+    .caja {
+        flex-basis: calc(50% - 20px);
+        margin: 0 10px 20px 10px;
+    }  
+
+    #content-index .nomUser {
+        float: none; /* Cambia a 'none' para que no flote y permita que otros elementos se sitúen debajo */
+        margin-right: 0;
+        display: block;
+    }
+
+    #content-index h1 {
+        margin-top: 0;
+        display: block;
+    }
+}
+
+@media (max-width: 863px){
+    #nav-index a {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 803px){
+    #nav-index a {
+        font-size: 17px;
+    }
+}
+
+@media (max-width: 768px){
+    #nav-index a {
+        font-size: 16px;
+    }
+}
+
+@media(max-width: 750px){
+    .checkbtn{
+        margin: 0 10px 0 10px;
+        display: block;
+    }
+    #contenedor-index {
+        display: grid;
+        grid-template-columns: 10% 90%;
+        grid-template-areas: "nav-index content-index"
+                            " content-index content-index";
+        width: 100vw; /* Usa viewport width en lugar de 100% */
+        height: 100vh; /* Usa viewport height en lugar de 100% */
+        max-height: 100vh; /* Establece una altura máxima */
+        }
+
+    #nav-index{
+        background-color: white;
+        
+    }
+
+    ul{
+        position: fixed;
+        width: 90%;
+        height: 100vh;
+        background:  #2E3D4C;
+        right: -100%;
+        text-align: center;
+        transition: all .5s;
+        overflow-y: auto; /* Agregar scroll vertical */
+        max-height: 100vh; /* Altura máxima */
+         
+    }
+    #nav-index ul li{
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+    #nav-index ul li a{
+        font-size: 20px;
+    }
+    #nav-index .logo {
+        display: none;
+    }
+    #check:checked ~ ul{
+        right:0;
+    }
+
+    .caja i{
+    display: none;
+    }
+}
+
+@media (max-width: 638px) {
+
+    .formularioventas [type="submit"] {
+        margin-left: 0; /* Elimina el margen izquierdo en dispositivos móviles */
+        margin-top: 10px; /* Ajusta el margen superior según sea necesario */
+        display: inline-block;
+    }
+}
+
+
+@media (max-width: 490px){
+.selectus{
+    margin-top: 10px;
+}
+    #subagregar{
+        margin-top: 5px; 
+    }
+    .cantidad{
+        margin-top: 5px;
+    }
+}
+
+@media (max-width: 604px){
+    #formventas a{
+        margin-top: 5px;
+    }
+    }
+
+.aventas i{
+margin: 12px 5px 12px 0;
+}
+
+@media (max-width: 375px){
+    #content-index .formulario {
+        width: 250px;
+    }
+
+#content-index .formulario input[type="text"],
+#content-index .formulario input[type="number"],
+#content-index .formulario input[type="email"],
+#content-index .formulario input[type="password"]{
+    width: 200px;
+    margin: 5px 0 5px 15px;
+}
+
+#content-index .formulario select,
+#content-index .formulario input[type='submit']{
+    margin: 5px 0 5px 15px;
+}
+    }
