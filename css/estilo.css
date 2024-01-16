@@ -16,13 +16,13 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100vh; /* Usar viewport height para ocupar toda la pantalla */
-    margin: 0; /* Resetear el margen para evitar espacio adicional */
+    height: 100vh; 
+    margin: 0; 
 }
 
 .login-form {
-    min-height: 300px; /* Establece la altura mínima del formulario */
-    margin: 5%;    background: rgba(46, 61, 76, 0.9); /* Fondo con efecto de transparencia */
+    min-height: 300px;
+    margin: 5%;    background: rgba(46, 61, 76, 0.9); 
     font-family: OpenSans;
     text-align: center;
     padding: 20px;
@@ -103,8 +103,8 @@
 
 @media (max-width: 425px) {
     .login-form {
-        min-height: 300px; /* Establece la altura mínima del formulario */
-        background: rgba(46, 61, 76, 0.9); /* Fondo con efecto de transparencia */
+        min-height: 300px;
+        background: rgba(46, 61, 76, 0.9);
         font-family: OpenSans;
         text-align: center;
         border-radius: none;
@@ -129,24 +129,24 @@
 }
 
 
-/* INDEX */
-
+/* GENERAL */
 #contenedor-index {
     display: grid;
     grid-template-columns: 20% 80%;
     grid-template-areas: "nav-index content-index";
-    width: 100vw; /* Usa viewport width en lugar de 100% */
-    height: 100vh; /* Usa viewport height en lugar de 100% */
-    max-height: 100vh; /* Establece una altura máxima */
-    overflow: hidden; /* Oculta el desbordamiento del contenido */
+    width: 100vw; 
+    height: 100vh; 
+    max-height: 100vh; 
+    overflow: hidden; 
 }
 
+/* LATERAL */
 #nav-index {
     grid-area: nav-index;
     background-color: #2E3D4C;
     height: 100%;
     display: flex;
-    flex-direction: column; /* Cambiado a columna para que los elementos estén uno debajo del otro */
+    flex-direction: column; 
 }
 
 #nav-index .logo {
@@ -227,26 +227,27 @@
     margin-right: 5px;
 }
 
+/* CONTENIDO */
 #content-index {
     background-color: white;
     grid-area: content-index;
-    overflow-y: auto; /* Agrega un desplazamiento vertical en caso necesario */
+    overflow-y: auto; 
 }
 
 #content-index h1{
     font-family: OpenSans;
     color: #333;
     margin: 20px;
-    display: inline-block; /* Permite que el label se alinee correctamente */
+    display: inline-block; 
 }
 
 #content-index .nomUser {
     font-family: OpenSans;
     font-size: 20px;
     color: #2E3D4C;
-    margin-right: 20px; /* Ajusta el margen derecho según sea necesario */
-    float: right; /* Alinea el label a la derecha */
-    line-height: 70px; /* Ajusta la altura de línea según sea necesario */
+    margin-right: 20px; 
+    float: right; 
+    line-height: 70px; 
 
 }
 
@@ -254,9 +255,9 @@
 #content-index h2 {
     font-family: OpenSans;
     color: #333;
-    text-align: center; /* Center the text horizontally */
-    margin-top: 25px; /* Adjust the top margin as needed */
-    margin-bottom: 0; /* Ajusta el margen inferior a 0 */ 
+    text-align: center; 
+    margin-top: 25px; 
+    margin-bottom: 0; 
 }
 
 
@@ -264,11 +265,11 @@
     font-family: OpenSans;
     font-size: 20px;
     color: #2E3D4C;
-    margin-right: 20px; /* Ajusta el margen derecho según sea necesario */
-    float: right; /* Alinea el label a la derecha */
-    margin-top: -36px; /* Ajusta el margen superior a la misma cantidad que el margen superior de h2 */
+    margin-right: 20px; 
+    float: right; 
+    margin-top: -36px; 
 }
-/* USUARIO */
+
 
 .table-user {
     font-family: OpenSans;
@@ -276,31 +277,29 @@
     border-collapse: collapse;
     width: 100%;
     margin: 20px 0;
-    overflow-y: auto; /* Agrega un desplazamiento vertical en caso necesario */
-    max-height: calc(100vh - 40px); /* Ajusta según el espacio disponible */
+    overflow-y: auto; 
+    max-height: calc(100vh - 40px); /
 }
 
-/* Estilo para las celdas de la tabla */
+
 .table-user th, .table-user td {
     padding: 12px;
     border: 1px solid #ddd;
     text-align: left;
 }
 
-/* Estilo para las cabeceras de la tabla */
 .table-user th {
     background-color: #f2f2f2;
     color: #333;
 }
 
 
-/* Estilo al pasar el ratón sobre las filas de la tabla */
 .table-user tr:hover {
     background-color: #f5f5f5;
 }
 
 .table-user td a i.fa-trash{
-    background-color: #FF5252; /* Rojo */
+    background-color: #FF5252; 
     color: white;
     padding: 5px;
     border-radius: 5px;
@@ -308,7 +307,7 @@
 }
 
 .table-user td a i.fa-pen-to-square {
-    background-color: #2196F3; /* Azul */
+    background-color: #2196F3; 
     color: white;
     padding: 5px;
     border-radius: 5px;
@@ -326,7 +325,7 @@
 }
 
 .botones a i {
-    margin-right: 5px; /* Adjust the margin as needed */
+    margin-right: 5px; 
     margin-top:20px;
     margin-bottom: 10px;
 }
@@ -336,7 +335,6 @@
 }
 
 
-/* Estilo base para el select */
 select {
     padding: 10px;
     font-size: 15px;
@@ -347,20 +345,19 @@ select {
     margin-left: 20px;
 }
 
-/* Estilo para el fondo del select desplegado */
 select:focus {
     outline: none;
-    border-color: #0D8E6E; /* Cambia el color al enfocar el select */
+    border-color: #0D8E6E; 
     box-shadow: 0 0 5px rgba(13, 142, 110, 0.7);
 }
 
-/* Estilo para las opciones del select */
+
 select option {
     background-color: #fff;
     color: #333;
 }
 
-/* Estilo para el hover de las opciones del select */
+
 select option:hover {
     background-color: #0D8E6E;
     color: #fff;
@@ -399,7 +396,7 @@ select option:hover {
 #content-index .formulario input[type="email"]:focus,
 #content-index .formulario input[type="password"]:focus{
     outline: none;
-    border-color: #0D8E6E; /* Cambia el color al enfocar el select */
+    border-color: #0D8E6E; 
     box-shadow: 0 0 5px rgba(13, 142, 110, 0.7);
 }
 
@@ -412,13 +409,13 @@ select option:hover {
     margin-left: 20px;
     border-radius: 8px;
     border: none;
-    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
-    transition: background-color 0.3s, box-shadow 0.3s; /* Agrega una transición suave al color de fondo y la sombra del cuadro */
+    cursor: pointer; 
+    transition: background-color 0.3s, box-shadow 0.3s; 
 }
 
 #content-index input[type="submit"]:hover {
     background-color: #13D0AB;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Agrega una sombra al pasar sobre el botón */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
 form a{
@@ -433,7 +430,7 @@ form a{
 }
 
 form a i {
-    margin-right: 5px; /* Adjust the margin as needed */
+    margin-right: 5px; 
     margin-top:20px;
     margin-bottom: 10px;
 }
@@ -451,7 +448,6 @@ button[name='quitar']{
     border: none;
 }
 button[name='quitar'] i.fa-xmark {
-    /* Aplica tus estilos aquí */
     color: white;
     background-color: #FF5252;
 }
@@ -469,8 +465,8 @@ button[name='quitar'] i.fa-xmark {
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     width: 300px;
-    margin: 0 auto; /* Center the form horizontally */
-    margin-top: 25px; /* Adjust the top margin as needed */
+    margin: 0 auto; 
+    margin-top: 25px; 
 }
 
 #content-index .formulario input[type="text"],
@@ -512,11 +508,11 @@ button[name='quitar'] i.fa-xmark {
     height: 80px;
     background-color: #2E3D4C;
     border-radius: 8px;
-    margin: 0 10px 20px 10px; /* Ajustado el margen para separar las cajas y dar espacio entre ellas */
+    margin: 0 10px 20px 10px;
     display: flex;
     align-items: center;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    transition: background-color 0.3s ease; /* Agregado un efecto de transición para el cambio de color */
+    transition: background-color 0.3s ease; 
 }
 
 .caja i {
@@ -547,10 +543,12 @@ button[name='quitar'] i.fa-xmark {
 
 #formventas form {
     display: flex;
-    align-items: center; /* Vertically align elements */
+    align-items: center; 
     flex-wrap: wrap;
   }
 
+
+/* REPONSIVE */
 @media (max-width: 966px) {
     .caja {
         flex-basis: calc(50% - 20px);
@@ -558,7 +556,7 @@ button[name='quitar'] i.fa-xmark {
     }  
 
     #content-index .nomUser {
-        float: none; /* Cambia a 'none' para que no flote y permita que otros elementos se sitúen debajo */
+        float: none; 
         margin-right: 0;
         display: block;
     }
